@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Consume third-party APIs through axios",
   "license": "ISC",
-  "repository": "",
+  "repository": "https://github.com/AlbertDz/consumer.git",
   "author": {
     "name": "Albert Diaz"
   },
