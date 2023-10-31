@@ -11,8 +11,8 @@ class Consume {
 		const newHeaders = values.headers ??= {};
 
 		let setup;
-		try { setup = require('../../../setup.js'); }
-		catch (error) { setup = require('./setup.js'); }
+		try { setup = require('../../../consumer-setup.js'); }
+		catch (error) { setup = require('./consumer-setup.js'); }
 
 		const { methods, headers, baseUrl } = setup;
 		if (!methods.hasOwnProperty(key)) return `Method ${key} not found`;

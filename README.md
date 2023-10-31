@@ -1,9 +1,8 @@
 # Consumer
 
 ## Configurar endpoints
-1. Crear archivo setup.js en la raiz del proyecto
+1. Crear archivo `consumer-setup.js` en la raiz del proyecto
 2. Agregar el siguiente código
-* Tambien puede configurar el archivo setup.js que viene con el código
 ```js
 const setup = {
 	baseUrl: 'https://restcountries.com',
@@ -25,13 +24,14 @@ const setup = {
 
 module.exports = setup;
 ```
+* Tambien puede configurar el archivo `consumer-setup.js` que viene con el código
 
 ## Realizar consulta
-1. Requerir "request" desde el index
+1. Requerir "request" desde `@albertdz/consumer`
 ```js
-const request = require('consumer');
+const request = require('@albertdz/consumer');
 ```
-2. Enviar los valores configurados
+2. Realizar la solicitud
 ```js
 const data = { name: 'Myanmar' };
 const queryParams = { fullText: true };
