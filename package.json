@@ -1,6 +1,6 @@
 {
   "name": "@albertdz/consumer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Consume third-party APIs through axios",
   "license": "ISC",
   "repository": "https://github.com/AlbertDz/consumer.git",
