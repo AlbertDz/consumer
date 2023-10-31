@@ -33,7 +33,7 @@ const request = require('consumer');
 ```
 2. Enviar los valores configurados
 ```js
-const data = { name: 'deutschland' };
+const data = { name: 'Myanmar' };
 const queryParams = { fullText: true };
 const response = await request('getCountry', { data, queryParams });
 ```

@@ -1,5 +1,3 @@
-const setup = require('./setup');
-
 class Consume {
 	#request;
 
@@ -11,6 +9,10 @@ class Consume {
 		const data = values.data ??= {};
 		const queryParams = values.queryParams ??= {};
 		const newHeaders = values.headers ??= {};
+
+		let setup;
+		try { setup = require('../../../setup.js'); }
+		catch (error) { setup = require('./setup.js'); }
 
 		const { methods, headers, baseUrl } = setup;
 		if (!methods.hasOwnProperty(key)) return `Method ${key} not found`;
