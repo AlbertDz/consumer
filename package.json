@@ -11,7 +11,7 @@
     "index.js",
     "Consume.js",
     "Request.js",
-    "setup.js"
+    "consumer-setup.js"
   ],
   "engines": {
     "node": ">=16.15.1"
