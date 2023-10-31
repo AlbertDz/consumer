@@ -1,0 +1,30 @@
+{
+  "name": "consumer",
+  "version": "1.0.0",
+  "description": "Consume third-party APIs through axios",
+  "license": "ISC",
+  "repository": "",
+  "author": {
+    "name": "Albert Diaz"
+  },
+  "files": [
+    "index.js",
+    "Consume.js",
+    "Request.js",
+    "setup.js"
+  ],
+  "engines": {
+    "node": ">=16.15.1"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "axios",
+    "api",
+    "consume",
+    "request"
+  ],
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
