@@ -40,3 +40,4 @@ const response = await request('getCountry', { data, queryParams });
 * Data: Valores configurados en args
 * queryParams: Valores para consultas avanzandas. Ejemplo: `/name?fullText=true`
 * headers: Cabeceras personalizadas para las consultas. Ejemplo `'Authorization': 'Bearer {token}'`
+* bearer: Valor para la cabecera `Authorization` en caso de no pasarlo en `headers`

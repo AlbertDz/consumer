@@ -8,7 +8,10 @@ class Consume {
 	async request (key, values) {
 		const data = values.data ??= {};
 		const queryParams = values.queryParams ??= {};
-		const newHeaders = values.headers ??= {};
+		const headerAutorization = values.bearer ??= '';
+		let newHeaders = values.headers ??= {};
+
+		if (headerAutorization) newHeaders = { ...newHeaders, Authorization: `Bearer ${headerAutorization}` };
 
 		let setup;
 		try { setup = require('../../../consumer-setup.js'); }
