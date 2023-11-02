@@ -16,5 +16,11 @@ module.exports = {
 		return response;
 	},
 	getStatus: () => status.status,
-	isSyncing: () => status.syncing,
+  isSyncing: () => status.syncing,
+  subscribe: (eventType, listener) => {
+    status.subscribe(eventType, listener);
+  },
+  unsubscribe: (eventType, listener) => {
+    status.unsubscribe(eventType, listener);
+  },
 };

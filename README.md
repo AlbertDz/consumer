@@ -29,19 +29,22 @@ module.exports = setup;
 5. En `methods` agregar los métodos a consultar, puede usar `GET POST PUT PATCH DELETE`
 
 ## Realizar consulta
-1. Importar
+* Importar
 ```js
-import { request, getStatus, isSyncing } from '@albertdz/consumer'
+import { request, getStatus, isSyncing, subscribe, unsubscribe } from '@albertdz/consumer'
 ```
-o usando `require`
-```js
-const { request, getStatus, isSyncing } = require('@albertdz/consumer')
-```
-* `request` Función que realiza la consulta
-* `getStatus` Función para obtener el estado de la consulta, inicia en `offline`, los demas valores son `pending error success`
-* `isSyncing` Función para saber si la consulta esta en progreso, es de tipo `boolean`
 
-2. Realizar la solicitud
+* Requerir
+```js
+const { request, getStatus, isSyncing, subscribe, unsubscribe } = require('@albertdz/consumer')
+```
+1. `request` Función que realiza la consulta
+2. `getStatus` Función para obtener el estado de la consulta, inicia en `offline`, los demas valores son `pending error success`
+3. `isSyncing` Función para saber si la consulta esta en progreso, es de tipo `boolean`
+4. `subscribe` Se subscribe a un evento `status syncing`
+5. `unsubscribe` Se da de baja a un evento `status syncing`
+
+* Realizar solicitud
 ```js
 const { request } = require('@albertdz/consumer')
 
@@ -49,7 +52,7 @@ const data = { name: 'Myanmar' };
 const queryParams = { fullText: true };
 const response = await request('getCountry', { data, queryParams });
 ```
-* `Data`: Valores configurados en `args`
-* `queryParams`: Valores para consultas avanzandas. Ejemplo: `/name?fullText=true`
-* `headers`: Cabeceras personalizadas para las consultas. Ejemplo `'Authorization': 'Bearer {token}'`
-* `bearer`: Valor para la cabecera `Authorization` en caso de no pasarlo en `headers`
+1. `Data`: Valores configurados en `args`
+2. `queryParams`: Valores para consultas avanzandas. Ejemplo: `/name?fullText=true`
+3. `headers`: Cabeceras personalizadas para las consultas. Ejemplo `'Authorization': 'Bearer {token}'`
+4. `bearer`: Valor para la cabecera `Authorization` en caso de no pasarlo en `headers`
