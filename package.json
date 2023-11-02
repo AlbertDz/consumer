@@ -1,6 +1,6 @@
 {
   "name": "@albertdz/consumer",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Consume third-party APIs through axios",
   "license": "ISC",
   "repository": "https://github.com/AlbertDz/consumer.git",
@@ -11,6 +11,7 @@
     "index.js",
     "Consume.js",
     "Request.js",
+    "Status.js",
     "consumer-setup.js"
   ],
   "engines": {

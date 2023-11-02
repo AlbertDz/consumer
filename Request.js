@@ -11,8 +11,13 @@ class Request {
 			const response = await axios({ url, method, data, headers });
 			return this.#formatResponse(response);
 		} catch (error) {
-			if (error.response) return this.#formatResponse(error.response);
-			else return { error: true, message: error.message };
+			const defaultResponse = { error: true, message: 'Request error' };
+			if (error.response) {
+				if (!error.response.data) return defaultResponse;
+				const response = this.#formatResponse(error.response);
+				response.error = true;
+				return response;
+			} else return defaultResponse;
 		}
 	}
 };
