@@ -56,3 +56,4 @@ const response = await request('getCountry', { data, queryParams });
 2. `queryParams`: Valores para consultas avanzandas. Ejemplo: `/name?fullText=true`
 3. `headers`: Cabeceras personalizadas para las consultas. Ejemplo `'Authorization': 'Bearer {token}'`
 4. `bearer`: Valor para la cabecera `Authorization` en caso de no pasarlo en `headers`
+5. `baseUrl`: Realiza una petición a una baseUrl diferente a la configurada en el `consumer-setup.js`

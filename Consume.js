@@ -6,6 +6,7 @@ class Consume {
 	}
 
 	async request (key, values) {
+		let baseUrl = values.baseUrl ??= '';
 		const data = values.data ??= {};
 		const queryParams = values.queryParams ??= {};
 		const headerAutorization = values.bearer ??= '';
@@ -17,11 +18,11 @@ class Consume {
 		try { setup = require('../../../consumer-setup.js'); }
 		catch (error) { setup = require('./consumer-setup.js'); }
 
-		const { methods, headers, baseUrl } = setup;
+		const { methods, headers, baseUrl: baseUrlSetup } = setup;
 		if (!methods.hasOwnProperty(key)) return `Method ${key} not found`;
 
 		const { url, method } = methods[key];
-		let endpoint = `${baseUrl}${url}`;
+		let endpoint = `${baseUrl ?? baseUrlSetup}${url}`;
 
 		for (const key in data) {
 			const value = data[key];
