@@ -27,6 +27,7 @@ module.exports = setup;
 3. Modificar `baseUrl` por la URL de la API a consumir
 4. Agregar las cabeceras necesarias en `headers`
 5. En `methods` agregar los métodos a consultar, puede usar `GET POST PUT PATCH DELETE`
+6. Ahora puede agregar una `baseUrl` a cada método
 
 ## Realizar consulta
 * Importar
